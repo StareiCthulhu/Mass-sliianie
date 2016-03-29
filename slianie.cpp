@@ -1,4 +1,4 @@
-// ConsoleApplication21.cpp: ���������� ����� ����� ��� ����������� ����������.
+// ConsoleApplication21.cpp: îïðåäåëÿåò òî÷êó âõîäà äëÿ êîíñîëüíîãî ïðèëîæåíèÿ.
 //
 
 #include "stdafx.h"
@@ -15,14 +15,16 @@ int* mergeArr(int* arrA, int* arrB, int* arrC, int a, int b);
 int main()
 {
 	int z = 0;
-	const int m = 8;
-	const int n = 7;
+	const int m = 8;     const int N = 8;  
+	// константы большимим буквами
+	const int n = 7;	//  ....
 	int a[m];
 	int b[n];
+	
 	printf_s("vvod mass a \n");
 	scanArr(a, m);
 	printArr(a, m);
-	printf_s("\n");
+	printf_s("\n");   // здесь это не надо перенести в функцию печати массива
 	buble(a, m);
 	printf_s("otsort. massiv a \n");
 	printArr(a, m);
@@ -41,7 +43,7 @@ int main()
 	printf_s("\n");
 	printf_s("\n");
 
-	const int l = m + n;
+	const int L = m + n;
 	int c[l];
 	mergeArr( a, b, c,m, n);
 	printf_s("otsort. massiv c \n");
@@ -64,6 +66,7 @@ void printArr(int* arr, int size) {
 	for (int i = 0; i < size; i++) {
 		printf_s("%i", arr[i]);
 	}
+	printf_s("\n");
 }
 int* buble(int* arr, int size) {
 	for (int i = 0; i < size; i++){
